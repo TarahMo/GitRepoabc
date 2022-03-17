@@ -109,6 +109,8 @@ public class EcommerceAppAutomation4 extends AndroidAPPBaseEcommerceApp{
 		//In the XPath syntax, [@attribute='value'] is optional
 		driver.findElementByXPath("//android.widget.Button").click();
 		
+		 System.out.println("test");
+		
 		//Thread.sleep() is very important. Always add it when actions on the current page are complete & before the control moves to the next page
 		//If Thread.sleep is used then StaleElementReferenceException can be avoided
 		
