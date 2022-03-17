@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<!-- We need to include parallel = "tests" in the suite tag as we need to run tests in parallel -->
+<!-- So browserstack will then scan this testng xml and when it notices the parallel = "tests and it will figure out how many tests we have, then it finds we have 2 tests, so execute both tests in parallel i.e. both tests will be kicked off at a time. Browserstack might delegate the execution to 2 different machines-->
+
+<suite name="Cloud Parallel Test Suite" parallel = "tests">
+
+<!-- When we want to run test cases i.e. classes parallelly, include each test case i.e. class in separate test tags -->
+<!-- Give different names to tests e.g. "EcommerceAppAutomationCloudFullTest" & "EcommerceAppAutomationCloudPartialTest" otherwise on run-time, error 'Two tests in the same suite cannot have the same name' is displayed -->
+<!-- Give meaningful name to test suite for future reference "Cloud Parallel Test Suite". This is however optional -->
+  
+  <test thread-count="5" name="EcommerceAppAutomationCloudFullTest">
+    <classes>
+      <class name="AppiumMavenGrpID.AppiumFramework.EcommerceAppAutomation4Cloud"/>
+    </classes>
+  </test> <!-- Test -->
+  
+  <test thread-count="5" name="EcommerceAppAutomationCloudPartialTest">
+    <classes>
+      <class name="AppiumMavenGrpID.AppiumFramework.EcommerceAppAutomation4CloudPartial"/>
+    </classes>
+  </test> <!-- Test -->
+  
+</suite> <!-- Suite -->

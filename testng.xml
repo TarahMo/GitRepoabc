@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+
+<!-- //STEP 4 (Listener Implementation) -->
+<!-- We need to give the knowledge of Listener class to the framework i.e. the testng.xml file -->
+<!-- so, when the test fails, the framework knows which file to invoke on test failure and then invokes the Listener class -->
+  
+  <listeners>
+  
+  <listener class-name = "resources.Listeners"/>
+  
+ <!-- ExtentReporterNG is also a kind of a Listener, so we need to give the knowledge of this file to the framework i.e. testng.xml, so include the filename in the listener tag in testng.xml file -->
+  <listener class-name = "resources.ExtentReporterNG"/>
+  
+  </listeners>
+  
+<!-- Classes are written within the 'test' tags in testng.xml file -->
+<!-- Therefore, if we write a method with @BeforeTest annotation within any of those classes, then that method is executed before the execution for those classes -->
+  
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="AppiumMavenGrpID.AppiumFramework.EcommerceAppAutomation4"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
