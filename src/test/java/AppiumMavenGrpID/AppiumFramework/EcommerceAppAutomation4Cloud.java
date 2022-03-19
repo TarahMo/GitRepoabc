@@ -85,6 +85,8 @@ public class EcommerceAppAutomation4Cloud extends AndroidAPPBaseEcommerceAppClou
         System.out.println(qvalue);
         
         Assert.assertEquals(qvalue, sum);
+	
+	System.out.println("main branch");
         
 }    
         
