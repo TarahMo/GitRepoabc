@@ -111,8 +111,6 @@ public class EcommerceAppAutomation4 extends AndroidAPPBaseEcommerceApp{
 		
 		 System.out.println("test");
 		
-		 System.out.println("main branch");
-		
 		//Thread.sleep() is very important. Always add it when actions on the current page are complete & before the control moves to the next page
 		//If Thread.sleep is used then StaleElementReferenceException can be avoided
 		
