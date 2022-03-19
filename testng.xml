@@ -15,6 +15,7 @@
   
   </listeners>
   
+<!-- Test -->
 <!-- Classes are written within the 'test' tags in testng.xml file -->
 <!-- Therefore, if we write a method with @BeforeTest annotation within any of those classes, then that method is executed before the execution for those classes -->
   
