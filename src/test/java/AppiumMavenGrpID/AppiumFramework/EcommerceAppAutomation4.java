@@ -145,6 +145,7 @@ public class EcommerceAppAutomation4 extends AndroidAPPBaseEcommerceApp{
         	double pvalue = Double.parseDouble(productvalue);
         	sum = sum + pvalue;
         	System.out.println(sum);
+		System.out.println("Test");
         }    
         
         Thread.sleep(4000);
